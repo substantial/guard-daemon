@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Guard::DaemonVersion::VERSION
   gem.authors       = ["re5et"]
   gem.email         = ["re5etsmyth@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Guard plugin to daemonize commands, and to start and stop them}
+  gem.summary       = %q{Guard plugin to daemonize commands, and to start and stop them}
+  gem.homepage      = "https://github.com/substantial/guard-daemon"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

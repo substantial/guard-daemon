@@ -25,15 +25,17 @@ module Guard
 
     def daemon_stop
       return unless @pid
+      pids_to_kill = [@pid]
       # find pid with its parent if any
       rows = `ps -eo pid,ppid | grep #{@pid}`.split("\n")
       rows.each do |row|
         pids = row.split(' ')
         if pids[1] == @pid.to_s
-          daemon_logger "stopping #{@pid}"
-          `kill -9 #{pids[0]}`
+          pids_to_kill << pids[0]
         end
       end
+      daemon_logger "stopping"
+      `kill #{pids_to_kill.join(' ')}`
     end
 
     def daemon_start

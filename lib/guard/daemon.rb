@@ -29,6 +29,7 @@ module Guard
       rows.each do |row|
         pids = row.split(' ')
         if pids[1] == @pid.to_s
+          daemon_logger 'stopping #{@pid}'
           `kill -9 #{pids[0]}`
         end
       end

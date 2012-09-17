@@ -5,7 +5,7 @@ require 'guard/daemon/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "guard-daemon"
-  gem.version       = Guard::Daemon::VERSION
+  gem.version       = Guard::DaemonVersion::VERSION
   gem.authors       = ["re5et"]
   gem.email         = ["re5etsmyth@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}

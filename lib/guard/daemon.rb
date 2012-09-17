@@ -1,12 +1,10 @@
-require "guard-daemon/version"
+require 'guard'
+require 'guard/guard'
+require 'rainbow'
 
 module Guard
 
   class Daemon < Guard
-
-    def initialize(watchers = [], options = [])
-      super
-    end
 
     def start
       daemon_restart
